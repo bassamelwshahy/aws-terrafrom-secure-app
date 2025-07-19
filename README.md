@@ -66,40 +66,16 @@ terraform plan
 terraform apply
 
 aws-terrafrom-secure-app/
-│
 ├── main.tf
+├── backend.tf
 ├── variables.tf
 ├── outputs.tf
-├── backend.tf               # Remote state config (S3 + DynamoDB)
-├── terraform.tfvars         # Local-only (optional, should be gitignored)
-├── install_proxy.sh         # NGINX EC2 provisioning script
-├── install_backend.sh       # Backend EC2 provisioning script
-├── README.md
-├── .gitignore
-│
+├── install_proxy.sh
+├── install_backend.sh
 ├── modules/
-│   ├── vpc/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   ├── ec2_proxy/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   ├── ec2_backend/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   ├── security_groups/
-│   │   ├── main.tf
-│   │   ├── variables.tf
-│   │   └── outputs.tf
-│   │
-│   └── alb/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf      
+    ├── network/
+    ├── security/
+    ├── ec2_proxy/
+    ├── ec2_backend/
+    └── load_balancer/
 
