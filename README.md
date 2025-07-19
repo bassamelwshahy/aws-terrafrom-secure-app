@@ -60,10 +60,7 @@ This project builds a secure and scalable web application architecture on AWS us
 git clone https://github.com/bassamelwshahy/aws-terrafrom-secure-app.git
 cd aws-terrafrom-secure-app
 
-# Initialize and apply
-terraform init
-terraform plan
-terraform apply
+# File hiecrachy
 
 aws-terrafrom-secure-app/
 ├── main.tf
