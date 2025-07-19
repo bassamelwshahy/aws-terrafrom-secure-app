@@ -65,16 +65,15 @@ terraform init
 terraform plan
 terraform apply
 
-FILE HIERACHY
 aws-terrafrom-secure-app/
 │
 ├── main.tf
 ├── variables.tf
 ├── outputs.tf
-├── backend.tf               # Remote backend config (e.g., S3 + DynamoDB)
-├── terraform.tfvars         # Optional: variable values (keep it local or ignored)
-├── install_proxy.sh         # Provisioning script for NGINX EC2s
-├── install_backend.sh       # Provisioning script for backend EC2s
+├── backend.tf               # Remote state config (S3 + DynamoDB)
+├── terraform.tfvars         # Local-only (optional, should be gitignored)
+├── install_proxy.sh         # NGINX EC2 provisioning script
+├── install_backend.sh       # Backend EC2 provisioning script
 ├── README.md
 ├── .gitignore
 │
@@ -102,5 +101,5 @@ aws-terrafrom-secure-app/
 │   └── alb/
 │       ├── main.tf
 │       ├── variables.tf
-│       └── outputs.tf
+│       └── outputs.tf      
 
